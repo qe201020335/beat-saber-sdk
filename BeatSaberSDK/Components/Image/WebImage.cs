@@ -78,7 +78,7 @@ public class WebImage : Image {
             }
             .WithNativeComponent(out CanvasGroup group)
             .AsBackground()
-            .Animate(_backgroundAlpha, (x, y) => x.Color = Color.black.ColorWithAlpha(y), applyImmediately: true)
+            .Animate(_backgroundAlpha, (x, y) => x.Color = Color.black.ColorWithAlpha(y))
             .Animate(_spinnerAlpha, (_, y) => group.alpha = y)
             .AsFlexGroup(justifyContent: Justify.Center, alignItems: Align.Center)
             .WithRectExpand()
